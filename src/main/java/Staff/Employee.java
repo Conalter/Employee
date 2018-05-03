@@ -4,12 +4,14 @@ public class Employee {
 
     private String name;
     private String ni;
-    private int salary;
+    private double salary;
 
-    public Employee(String name, String ni, int salary ){
+
+    public Employee(String name, String ni, double salary){
         this.name = name;
         this.ni = ni;
         this.salary = salary;
+
     }
 
     public String getName() {
@@ -20,7 +22,15 @@ public class Employee {
         return ni;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public double payBonus(){
+        return (this.salary/100);
     }
 }
